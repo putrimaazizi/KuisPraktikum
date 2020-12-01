@@ -10,5 +10,6 @@ package kuisprakpbo;
  * @author hp
  */
 public interface Interface {
-    
+    public double nilaiAkhir();
+    public void tampil();
 }

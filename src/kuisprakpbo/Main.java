@@ -48,9 +48,11 @@ public class Main {
             nilaiWawancara = input.nextInt();
                     
             formPendaftaran pendaftaran = new formPendaftaran(nik, nama, nilaiTulis, nilaiCoding, nilaiWawancara);
+            web Web = new web();
+            android Android = new android();
             
             switch(pilih){
-                case 1 :
+                case '1' : {
                     int menu;
                     while(true){ 
                         System.out.println("Menu ");
@@ -71,16 +73,14 @@ public class Main {
                                 System.out.print("Input Nilai Tes Wawancara : ");
                                 pendaftaran.nilaiWawancara = edit.nextInt();
                         }else if(menu == 2){ 
-                                pendaftaran.tampil();
-                                break; 
+                                Android.tampil();  
                         }else if(menu == 3){ 
                             System.exit(0);
-                            break;
                         }
                     }
                     break;
-                
-                case 2:
+                }
+                case '2' : {
                     int menu2;
                     while(true){
                         System.out.println("Menu ");
@@ -100,17 +100,14 @@ public class Main {
                     
                                 System.out.print("Input Nilai Tes Wawancara : ");
                                 pendaftaran.nilaiWawancara = edit.nextInt();
-                                break;
                         } else if(menu2 == 2){
-                                pendaftaran.tampil2();
-                                break; 
-                        } else if(menu2 == 3){
+                                Web.tampil();
+                        } else{
                                 System.exit(0);
-                                break;
                         }
                     }
                     break;
-            
+                }
                 default: System.out.println("salah input");
             } 
     }  
